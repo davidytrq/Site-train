@@ -297,3 +297,33 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+// Updated JavaScript
+document.addEventListener('DOMContentLoaded', () => {
+  // Dark Mode Toggle
+  const darkModeBtn = document.getElementById('darkModeBtn');
+  const theme = localStorage.getItem('theme') || 'light';
+  
+  document.body.dataset.theme = theme;
+  
+  darkModeBtn.addEventListener('click', () => {
+    document.body.dataset.theme = theme === 'light' ? 'dark' : 'light';
+    localStorage.setItem('theme', document.body.dataset.theme);
+  });
+  
+  // AI Helper Interaction
+  const aiHelper = document.getElementById('aiHelper');
+  const aiMessage = document.getElementById('aiMessage');
+  
+  aiHelper.addEventListener('click', () => {
+    aiMessage.textContent = 'Ready to help you crush your goals! 💪';
+    aiHelper.style.animation = 'pulse 1s infinite';
+    
+    setTimeout(() => {
+      aiMessage.textContent = 'Hey! I'm your AI trainer. Let\'s get moving!';
+      aiHelper.style.animation = 'none';
+    }, 2000);
+  });
+  
+  // Initialize
+  document.getElementById('startBtn').click();
+});
