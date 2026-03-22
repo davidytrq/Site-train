@@ -9,14 +9,17 @@ body {
     margin-top: 50px; /* Gives it some space from the top */
     font-family: sans-serif;
 }
-
-h3 {
-    background-color: #333; /* Dark background for the pill */
-    color: white;           /* White text */
-    padding: 10px 30px;    /* Space around the text */
-    border-radius: 50px;   /* This creates the "pill" shape */
+/* This rule works for ANY element with class="pill" */
+.pill {
+    background-color: #333; /* Dark color */
+    color: white;
+    padding: 10px 30px;
+    border-radius: 50px;    /* The pill shape */
     display: inline-block;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    text-align: center;
+    text-decoration: none;
+    margin: 10px auto;
+    border: none;
 }
 
 /* Styling for the smaller top box */
