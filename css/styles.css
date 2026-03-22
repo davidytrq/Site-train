@@ -27,13 +27,3 @@ h3 {
     border-radius: 40px;   /* Pill shape */
     margin: 20px 0;        /* Space between elements */
 }
-
-/* Styling for the larger bottom box */
-.box-two {
-    background-color: #333;
-    width: 85%;            /* Slightly wider */
-    height: 300px;         /* Taller like your drawing */
-    border-radius: 30px 100px 100px 30px; /* Custom curves like your sketch */
-    margin-top: 10px;
-}
-
