@@ -69,3 +69,39 @@ h3 {
     transform: scale(0.98);   /* Slight "push" effect */
 }
 
+/* Center the new theme button container */
+.theme-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Style for the 'Grey Mode' toggle button */
+#themeToggle {
+    background-color: #333; /* Dark pill */
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 50px;   /* Pill shape */
+    font-size: 1rem;
+    font-family: sans-serif;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: background 0.3s ease; /* Smooth transition when clicking */
+}
+
+/* This is where the magic happens. We will apply this class to the <body> using JavaScript */
+.grey-mode {
+    background-color: #f0f0f0; /* The grey color for the whole page */
+    color: #333;               /* The dark text color */
+}
+
+/* Optional: Make the pills slightly different colors in grey mode for contrast */
+.grey-mode h3 {
+    background-color: #444; /* Darker grey for pills */
+}
+
+.grey-mode #themeToggle {
+    background-color: #fff; /* Button turns white in grey mode */
+    color: #333;
+}
+
