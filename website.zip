@@ -1,0 +1,8 @@
+This is a placeholder for a zip file containing the AI Sport Trainer website files.
+In a real implementation, this would be a compressed archive of:
+- index.html
+- css/styles.css
+- js/main.js
+
+To create the actual zip file, you would use:
+zip -r website.zip index.html css/styles.css js/main.js
