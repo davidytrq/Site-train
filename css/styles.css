@@ -46,3 +46,26 @@ h3 {
     font-weight: normal;
 }
 
+.butn {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#myButton {
+    background-color: #001f3f; /* Dark Blue */
+    color: white;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 50px;      /* Pill shape */
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease; /* Smooth color change */
+}
+
+/* This makes the button glow slightly when you touch it */
+#myButton:active {
+    background-color: #003366;
+    transform: scale(0.98);   /* Slight "push" effect */
+}
+
