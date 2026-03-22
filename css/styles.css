@@ -27,3 +27,22 @@ h3 {
     border-radius: 40px;   /* Pill shape */
     margin: 20px 0;        /* Space between elements */
 }
+.box-two {
+    background-color: #333; /* Same dark color as the others */
+    color: white;           /* Makes the text readable */
+    padding: 20px 40px;    /* Space inside around the text */
+    border-radius: 50px;   /* Perfect pill shape */
+    display: inline-block;  /* Makes the box only as wide as the text */
+    margin: 20px auto;      /* Centers it and adds vertical space */
+    text-align: center;
+    max-width: 80%;        /* Keeps it from hitting the screen edges */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Soft shadow to make it pop */
+}
+
+/* This makes sure the text inside looks good */
+.box-two h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
