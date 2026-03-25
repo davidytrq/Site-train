@@ -1,74 +1,163 @@
+/* Full‑page Instagram‑style gradient */
 body {
-    background-color: white;
-}
-body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #833ab4, #e1306c, #f77737);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #fff;
     display: flex;
     flex-direction: column;
-    align-items: center; /* This centers the pill horizontally */
-    background-color: white;
-    margin-top: 50px; /* Gives it some space from the top */
-    font-family: sans-serif;
+    align-items: center;
 }
-/* This rule works for ANY element with class="pill" */
+
+/* Pill shape shared */
 .pill {
-    background-color: #333; /* Dark color */
-    color: white;
-    padding: 10px 30px;
-    border-radius: 50px;    /* The pill shape */
-    display: inline-block;
+    border-radius: 50px;
+}
+
+/* Header */
+.header {
+    margin-top: 30px;
+    padding: 12px 30px;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    font-size: 1.5rem;
+    font-weight: bold;
     text-align: center;
-    text-decoration: none;
-    margin: 10px auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Navigation */
+.nav {
+    margin: 20px 0;
+    display: flex;
+    gap: 15px;
+}
+.nav-pill {
+    padding: 10px 24px;
+    background: rgba(255,255,255,0.2);
     border: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+.nav-pill:hover {
+    background: rgba(255,255,255,0.3);
+}
+.nav-pill.active {
+    background: rgba(255,255,255,0.4);
+    transform: scale(1.05);
 }
 
-/* Styling for the smaller top box */
-.box-one {
-    background-color: #333;
-    width: 80%;            /* Makes it wide like your drawing */
-    height: 60px;          /* Adjust height as needed */
-    border-radius: 40px;   /* Pill shape */
-    margin: 20px 0;        /* Space between elements */
-}
-.box-two {
-    background-color: #333; /* Same dark color as the others */
-    color: white;           /* Makes the text readable */
-    padding: 20px 40px;    /* Space inside around the text */
-    border-radius: 50px;   /* Perfect pill shape */
-    display: inline-block;  /* Makes the box only as wide as the text */
-    margin: 20px auto;      /* Centers it and adds vertical space */
-    text-align: center;
-    max-width: 80%;        /* Keeps it from hitting the screen edges */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Soft shadow to make it pop */
+/* Container */
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-/* This makes sure the text inside looks good */
-.box-two h2 {
-    margin: 0;
-    font-size: 1.2rem;
-    font-weight: normal;
+/* Tabs */
+.tab-content {
+    display: none;
+}
+.tab-content.active {
+    display: block;
 }
 
-.butn {
-    margin-top: 20px;
-    text-align: center;
+/* Post Creator */
+.post-creator {
+    padding: 15px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(8px);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
-
-#myButton {
-    background-color: #001f3f; /* Dark Blue */
-    color: white;
-    padding: 12px 40px;
+.post-creator textarea {
     border: none;
-    border-radius: 50px;      /* Pill shape */
-    font-size: 1.1rem;
+    border-radius: 20px;
+    padding: 12px;
+    font-size: 1rem;
+    resize: none;
+    background: rgba(255,255,255,0.9);
+    color: #333;
+}
+.post-btn {
+    align-self: flex-end;
+    padding: 8px 20px;
+    background: rgba(0,0,0,0.2);
+    border: none;
+    color: #fff;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.3s ease; /* Smooth color change */
+    transition: background 0.3s;
+}
+.post-btn:hover {
+    background: rgba(0,0,0,0.4);
 }
 
-/* This makes the button glow slightly when you touch it */
-#myButton:active {
-    background-color: #003366;
-    transform: scale(0.98);   /* Slight "push" effect */
+/* Posts */
+.post {
+    padding: 15px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(8px);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.post-header {
+    font-size: 1rem;
+}
+.post-content {
+    background: rgba(255,255,255,0.1);
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 0.95rem;
+}
+.post-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+.like-btn, .comment-btn {
+    padding: 6px 16px;
+    background: rgba(0,0,0,0.2);
+    border: none;
+    color: #fff;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.like-btn:hover, .comment-btn:hover {
+    background: rgba(0,0,0,0.4);
 }
 
+/* Messages */
+.message-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.message-item {
+    padding: 12px 18px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(8px);
+    font-size: 0.95rem;
+}
+.message-input-area {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+.message-input {
+    flex: 1;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 50px;
+    background: rgba(255,255,255,0.9);

@@ -2,21 +2,90 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>wlm</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pillgram</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <header class="header pill">Pillgram</header>
 
-    <h3 class="pill">nassim site</h3>
-<div class="box-two pill">
-    <h2>Great to see you here</h2>
-</div>
+    <nav class="nav">
+        <button class="nav-pill active" data-tab="home">Home</button>
+        <button class="nav-pill" data-tab="messages">Messages</button>
+        <button class="nav-pill" data-tab="profile">Profile</button>
+    </nav>
 
-<div class="box-one"></div>
-<div class="box-two"><h2>choose in those options bellow </h2></div>
-<div class="butn">
-    <button type="button" id="myButton">click</button>
-</div>
+    <main class="container">
+        <!-- Home Section -->
+        <section id="home" class="tab-content active">
+            <div class="post-creator pill">
+                <textarea placeholder="Share something…" rows="2"></textarea>
+                <button class="post-btn pill">Post</button>
+            </div>
+            <div class="post pill">
+                <div class="post-header">
+                    <strong>demo_user</strong>
+                </div>
+                <div class="post-content">
+                    Welcome to Pillgram! This is a simple Instagram‑style page with pill‑shaped UI.
+                </div>
+                <div class="post-actions">
+                    <button class="like-btn pill">Like</button>
+                    <button class="comment-btn pill">Comment</button>
+                </div>
+            </div>
+            <!-- More posts can be added here -->
+        </section>
+
+        <!-- Messages Section -->
+        <section id="messages" class="tab-content">
+            <div class="message-list">
+                <div class="message-item pill">
+                    <strong>Alice:</strong> Hey! How's it going?
+                </div>
+                <div class="message-item pill">
+                    <strong>Bob:</strong> Did you see the new post?
+                </div>
+            </div>
+            <div class="message-input-area">
+                <input type="text" placeholder="Type a message…" class="message-input pill">
+                <button class="send-btn pill">Send</button>
+            </div>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="profile" class="tab-content">
+            <div class="profile-header pill">
+                <h2>My Profile</h2>
+            </div>
+            <div class="profile-stats pill">
+                <span>Posts: 12</span>
+                <span>Followers: 340</span>
+                <span>Following: 180</span>
+            </div>
+            <div class="profile-bio pill">
+                <p>Welcome to my profile! I love coding, design, and g	
+ood coffee.</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Simple tab switching
+document.querySelectorAll('.nav-pill').forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons and content sections
+                document.querySelectorAll('.nav-pill').forEach(btn => btn.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(section => section.classList.remove('active'));
+
+                // Add active to the clicked button
+                button.classList.add('active');
+
+                // Show corresponding section
+                const tabId = button.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+    </script>
 </body>
 </html>
-
