@@ -199,12 +199,12 @@ body {
 
 /* Profile */
 .profile-header {
-    padding: 20px;
+    padding: 18px;
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(8px);
     text-align: center;
     font-size: 1.5rem;
-    border-radius: 50px;
+    border-radius: 30px;
 }
 .profile-stats {
     padding: 12px;
