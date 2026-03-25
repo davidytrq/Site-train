@@ -1,4 +1,4 @@
-/* Full‑page Instagram‑style gradient */
+/* Full-page Instagram-style gradient */
 body {
     margin: 0;
     padding: 0;
@@ -9,11 +9,22 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 20px;
 }
 
 /* Pill shape shared */
 .pill {
     border-radius: 50px;
+    padding: 12px 30px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 /* Header */
@@ -26,6 +37,7 @@ body {
     font-weight: bold;
     text-align: center;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    border-radius: 50px;
 }
 
 /* Navigation */
@@ -33,22 +45,26 @@ body {
     margin: 20px 0;
     display: flex;
     gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .nav-pill {
     padding: 10px 24px;
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.2);
     border: none;
     color: #fff;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
+    transition: all 0.3s ease;
+    border-radius: 50px;
 }
 .nav-pill:hover {
-    background: rgba(255,255,255,0.3);
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
 }
 .nav-pill.active {
-    background: rgba(255,255,255,0.4);
+    background: rgba(255, 255, 255, 0.4);
     transform: scale(1.05);
 }
 
@@ -73,7 +89,7 @@ body {
 /* Post Creator */
 .post-creator {
     padding: 15px;
-    background: rgba(255,255,255,0.15);
+    background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(8px);
     display: flex;
     flex-direction: column;
@@ -85,27 +101,29 @@ body {
     padding: 12px;
     font-size: 1rem;
     resize: none;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255, 255, 255, 0.9);
     color: #333;
 }
 .post-btn {
     align-self: flex-end;
     padding: 8px 20px;
-    background: rgba(0,0,0,0.2);
+    background: rgba(0, 0, 0, 0.3);
     border: none;
     color: #fff;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.3s;
+    border-radius: 50px;
+    transition: all 0.3s ease;
 }
 .post-btn:hover {
-    background: rgba(0,0,0,0.4);
+    background: rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
 }
 
 /* Posts */
 .post {
     padding: 15px;
-    background: rgba(255,255,255,0.15);
+    background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(8px);
     display: flex;
     flex-direction: column;
@@ -113,9 +131,10 @@ body {
 }
 .post-header {
     font-size: 1rem;
+    font-weight: bold;
 }
 .post-content {
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
     padding: 10px;
     border-radius: 20px;
     font-size: 0.95rem;
@@ -127,15 +146,15 @@ body {
 }
 .like-btn, .comment-btn {
     padding: 6px 16px;
-    background: rgba(0,0,0,0.2);
+    background: rgba(0, 0, 0, 0.2);
     border: none;
     color: #fff;
     font-size: 0.9rem;
     cursor: pointer;
-    border-radius: 20px;
+    border-radius: 50px;
 }
 .like-btn:hover, .comment-btn:hover {
-    background: rgba(0,0,0,0.4);
+    background: rgba(0, 0, 0, 0.4);
 }
 
 /* Messages */
@@ -146,7 +165,7 @@ body {
 }
 .message-item {
     padding: 12px 18px;
-    background: rgba(255,255,255,0.15);
+    background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(8px);
     font-size: 0.95rem;
 }
@@ -160,4 +179,57 @@ body {
     padding: 12px 18px;
     border: none;
     border-radius: 50px;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    font-size: 1rem;
+}
+.send-btn {
+    padding: 12px 24px;
+    background: rgba(0, 0, 0, 0.3);
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    border-cursor: pointer;
+    transition: all 0.3s ease;
+}
+.send-btn:hover {
+    background: rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
+}
+
+/* Profile */
+.profile-header {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    text-align: center;
+    font-size: 1.5rem;
+    border-radius: 50px;
+}
+.profile-stats {
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: space-around;
+    font-size: 1rem;
+}
+.profile-bio {
+    margin-top: 10px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    font-size: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
