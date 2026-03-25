@@ -1,18 +1,19 @@
-// Wait for the button to exist in the HTML
 document.addEventListener('DOMContentLoaded', () => {
-    const myBtn = document.getElementById('myButton');
-
-    if (myBtn) {
-        myBtn.addEventListener('click', () => {
-            // This changes the text of the button when clicked
-            myBtn.innerText = "Sent! ❤️";
-            
-            // This shows a pop-up message
-            alert("clicked 💀!");
-            
-            // Optional: Change the background color of the page
-            document.body.style.backgroundColor = "#f0f8ff";
+    // Like button functionality
+    const likeBtns = document.querySelectorAll('.like-btn');
+    
+    likeBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            btn.style.transform = "scale(1.3)";
+            setTimeout(() => btn.style.transform = "scale(1)", 200);
+            btn.innerText = (btn.innerText === "❤️") ? "🤍" : "❤️";
         });
-    }
-});
+    });
 
+    // Theme Toggle
+    const themeBtn = document.getElementById('themeToggle');
+    themeBtn.addEventListener('click', () => {
+        document.body.classList.toggle('grey-mode');
+    });
+});
+	

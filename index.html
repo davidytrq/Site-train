@@ -7,74 +7,34 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header class="header pill">Pillgram</header>
 
-    <nav class="nav">
-        <button class="nav-pill active" data-tab="home">Home</button>
-        <button class="nav-pill" data-tab="messages">Messages</button>
-        <button class="nav-pill" data-tab="profile">Profile</button>
+    <header class="pill-header">
+        <h1>Pillgram</h1>
+        <button id="themeToggle" class="icon-btn">🌓</button>
+    </header>
+
+    <main class="feed">
+        <div class="post-card pill">
+            <div class="post-header">
+                <span class="username">nassim_hadid</span>
+            </div>
+            <div class="post-image" style="background-color: #444;">
+                <p style="color: white; text-align: center; padding-top: 100px;">Photo Space</p>
+            </div>
+            <div class="post-content">
+                <button class="like-btn">❤️</button>
+                <p><strong>nassim_hadid</strong> building the new world...</p>
+            </div>
+        </div>
+    </main>
+
+    <nav class="bottom-nav pill">
+        <a href="index.html">🏠</a>
+        <a href="search.html">🔍</a>
+        <a href="profile.html">👤</a>
     </nav>
 
-    <main class="container">
-        <!-- Home Section -->
-        <section id="home" class="tab-content active">
-            <div class="post-creator pill">
-                <textarea placeholder="Share something…" rows="2"></textarea>
-                <button class="post-btn pill">Post</button>
-            </div>
-            <div class="post pill">
-                <div class="post-header">
-                    <strong>demo_user</strong>
-                </div>
-                <div class="post-content">
-                    Welcome to Pillgram! just testing.
-                </div>
-                <div class="post-actions">
-                    <button class="like-btn pill">Like</button>
-                    <button class="comment-btn pill">Comment</button>
-                </div>
-            </div>
-            <!-- More posts can be added here -->
-        </section>
-
-        <!-- Messages Section -->
-        <section id="messages" class="tab-content">
-            <div class="message-list">
-                <div class="message-item pill">
-                    <strong>Alice:</strong> Hey! How's it going?
-                </div>
-                <div class="message-item pill">
-                    <strong>Bob:</strong> Did you see the new post?
-                </div>
-            </div>
-            <div class="message-input-area">
-                <input type="text" placeholder="Type a message…" class="message-input pill">
-                <button class="send-btn pill">Send</button>
-            </div>
-        </section>
-
-        <!-- Profile Section -->
-        <section id="profile" class="tab-content">
-            <div class="profile-header pill">
-                <h2>Profile</h2><div class="profile-pic-container">
-    <img src="your-image.jpg" alt="Profile Picture" class="profile-img">
-</div>
-
-            </div>
-            <div class="profile-stats pill">
-                <span>Posts: 0</span>
-                <span>Followers: 0</span>
-                <span>Following: 0</span>
-            </div>
-            <div class="profile-bio pill">
-                <p>Welcome to my beta social new </p>
-            </div>
-                </div>
-        </section>
-    </main>
+    <script src="js/main.js"></script>
 </body>
 </html>
-        </section>
-    </main>
-</body>
-</html>
+
